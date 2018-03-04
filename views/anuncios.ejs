@@ -1,0 +1,16 @@
+<%include header%>
+<div class="row">
+        <div class="col-lg-12">
+          <h1 class="my-4" id="tituloTodos">Anuncios</h1>
+        </div>
+        <% for(var i=0; i < lista.length; i++) { %>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+        <img class="img-fluid d-block mx-auto" src="<%=ruta+lista[i].foto%>" alt="">
+        <h3><%= lista[i].nombre %></h3>
+        <small>Venta: <%= lista[i].venta %></small>
+        <h2><%= lista[i].precio %> €</h2>
+        <p>Tags: <%= lista[i].tags %> </p> 
+        </div>     
+        <% } %> 
+</div>     
+<%include footer%>

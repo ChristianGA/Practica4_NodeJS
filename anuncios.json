@@ -1,0 +1,18 @@
+{
+    "anuncios": [
+        {
+            "nombre": "Bicicleta",
+            "venta": true,
+            "precio": 230.15,
+            "foto": "bici.jpg",
+            "tags": ["lifestyle", "motor"]
+        },
+        {
+            "nombre": "iPhone X",
+            "venta": false,
+            "precio": 1100.00,
+            "foto": "iphonex.png",
+            "tags": ["lifestyle","mobile"]
+        }
+    ]
+}  
