@@ -10,5 +10,26 @@ else{
           <h2 class="my-4" id="tituloTodos">Error</h2>
           <h1><%= message %></h1>
 <h2>Código de error <%= error.status %></h2>
-</div>   
+</div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+                <h1>Error</h1>
+                <% if(error.status == 404){
+                    message = "No existe!!";
+                }
+                else{
+                    message = "No fue bien";
+                }%>
+                <h2><%= message %></h2>
+                <h3>Código de error <%= error.status %></h3>
+              <% } %>
+            </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+      
+      </div>
+      <!-- /#wrapper -->
 <% include footer %>
