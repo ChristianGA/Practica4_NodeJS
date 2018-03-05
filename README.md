@@ -2,7 +2,7 @@
 
 Iniciar la base de datos
 
->npm init installDB
+>npm run installDB
 
 Dependencias del proyecto
 

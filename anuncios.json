@@ -12,7 +12,7 @@
             "venta": false,
             "precio": 1100.00,
             "foto": "iphonex.png",
-            "tags": ["lifestyle","mobile"]
+            "tags": ["lifestyle", "mobile"]
         }
     ]
 }  

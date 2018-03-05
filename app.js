@@ -13,6 +13,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+require('./lib/connectMongoose');
+require('./models/Anuncio');
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -25,9 +28,6 @@ app.use('/', require('./routes/index'));
 app.use('/apiv1/anuncios', require('./routes/apiv1/anuncios'));
 app.use('/apiv1/tags', require('./routes/apiv1/tags'));
 app.use('/apiv1/crear', require('./routes/apiv1/crear'));
-
-require('./lib/connectMongoose');
-require('./models/Anuncio');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

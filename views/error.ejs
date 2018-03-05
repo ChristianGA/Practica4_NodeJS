@@ -1,16 +1,11 @@
 <% include header %>
-<% if(error.status == 404){
-    message = "No existe!!";
-}
-else{
-    message = "No fue bien";
-}%>
-<div class="form_filtrar">
+
+    <div class="form_filtrar">
         <div class="col-lg-12">
-          <h2 class="my-4" id="tituloTodos">Error</h2>
-          <h1><%= message %></h1>
-<h2>Código de error <%= error.status %></h2>
-</div>
+            <h2 class="my-4" id="tituloTodos">Error</h2>
+            <h1><%= message %></h1>
+            <h2>Código de error <%= error.status %></h2>
+        </div>
 
         <div id="page-content-wrapper">
             <div class="container-fluid">
@@ -27,9 +22,9 @@ else{
               <% } %>
             </div>
         </div>
-      </div>
+    </div>
       <!-- /#page-content-wrapper -->
       
-      </div>
+</div>
       <!-- /#wrapper -->
 <% include footer %>
