@@ -3,16 +3,15 @@
   <div class="container-fluid">
       <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
       <h1>Anuncios</h1>
-      <% for(var i=0; i < lista.length; i++) { %>
+      <% anuncios.forEach(anuncio => { %>
         <!-- <div class="col-lg-4 col-sm-6 text-center mb-4">
         <img class="img-fluid d-block mx-auto" src="<%=ruta+lista[i].foto%>" alt=""> -->
-        <h3><%= lista[i].nombre %></h3>
-        <small>Venta: <%= lista[i].venta %></small>
-        <h2><%= lista[i].precio %> €</h2>
-        <p>Tags: <%= lista[i].tags %> </p> 
+        <h3><%= anuncio.nombre %></h3>
+        <small>Venta: <%= anuncio.venta %></small>
+        <h2><%= anuncio.precio %> €</h2>
+        <p>Tags: <%= anuncio.tags %> </p> 
         </div>     
-        <% } %>
-      
+        <% }) %>
   </div>
 </div>
 <!-- /#page-content-wrapper -->

@@ -4,8 +4,10 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Anuncio = mongoose.model('Anuncio');
+const fs = require('fs');
 
 router.get('/', (req, res, next) => {
+    try{
 
     const nombre = req.query.nombre;
     const venta = req.query.venta;
@@ -13,6 +15,8 @@ router.get('/', (req, res, next) => {
     const precio = req.query.precio;  
     const skip = parseInt(req.query.skip);
     const limit = parseInt(req.query.limit);
+    const sort = req.query.sort;
+    const includeTotal = true;
     const filter = {};
     
     if (nombre){
@@ -39,13 +43,9 @@ router.get('/', (req, res, next) => {
             }
           }
     
-    Anuncio.lista(filter, skip, limit).then(lista => {
-        res.render('anuncios',{lista,ruta});
-        }).catch( err => {
-            console.log('Error ',err);
-            next(err);
-            return;        
-    });
+          const {total, rows} = await Anuncio.list(filter, skip, limit, sort, includeTotal);
+          res.render('anuncios', { total, anuncios: rows });
+        } catch(err) { return res.next(err); }   
 });
 
 module.exports = router;

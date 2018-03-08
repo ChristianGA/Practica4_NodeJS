@@ -1,4 +1,4 @@
-<% include header %>
+<%include header%>
 
     <div class="form_filtrar">
         <div class="col-lg-12">
@@ -11,15 +11,15 @@
             <div class="container-fluid">
                 <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
                 <h1>Error</h1>
-                <% if(error.status == 404){
+               <!-- <% if(error.status == 404){
                     message = "No existe!!";
                 }
                 else{
                     message = "No fue bien";
-                }%>
+                }%>-->
                 <h2><%= message %></h2>
                 <h3>Código de error <%= error.status %></h3>
-              <% } %>
+              <!-- <% } %> -->
             </div>
         </div>
     </div>
@@ -27,4 +27,4 @@
       
 </div>
       <!-- /#wrapper -->
-<% include footer %>
+<%include footer%>
